@@ -1,0 +1,2 @@
+# OpenFliglo
+Opensource Fliqlo alternative
