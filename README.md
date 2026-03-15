@@ -13,6 +13,10 @@ Bu proje, Go ve Ebitengine kullanılarak geliştirilmiş, yüksek performanslı 
 - **Kişiselleştirme:** Sağ üst köşede özelleştirilebilir URL alanı (Varsayılan: `www.farukguler.com`).
 - **Yüksek Performans:** Düşük kaynak tüketimi ve optimize edilmiş dosya boyutu.
 - **Güvenli Çıkış:** Klavye veya fare hareketiyle anında kapanma.
+- **Windows Meta Verileri:** Dosya özelliklerinde sürüm, şirket ve açıklama bilgileri (False-positive uyarılarını azaltmak için).
+
+## Antivirüs Uyarıları Hakkında
+Eğer bir "Virüs" veya "Bilinmeyen Yayıncı" uyarısı alıyorsanız, lütfen [VIRUS_NOTICE.md](VIRUS_NOTICE.md) dosyasını okuyun. Bu tamamen Go dilinin derleme yapısıyla ilgili hatalı bir alarmdır.
 
 ## Gereksinimler
 
@@ -21,9 +25,13 @@ Bu proje, Go ve Ebitengine kullanılarak geliştirilmiş, yüksek performanslı 
 
 ## Derleme (Build)
 
-Uygulamayı en küçük boyutta ve terminal penceresi olmadan derlemek için aşağıdaki komutu kullanın:
+Uygulamayı meta verileriyle birlikte derlemek için önce kaynak dosyasını oluşturun, ardından derleme yapın:
 
 ```powershell
+# Kaynak dosyasını (.syso) oluştur / güncelle
+go-winres make
+
+# Uygulamayı derle
 go build -ldflags="-s -w -H windowsgui" -o GoSaatVeTarih.scr main.go
 ```
 
