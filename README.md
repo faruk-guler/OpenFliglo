@@ -44,4 +44,4 @@ go build -ldflags="-s -w -H windowsgui" -o GoSaatVeTarih.scr main.go
 Kurumsal yapıda dağıtmak için projedeki `gpo.md` dosyasındaki adımları takip edebilirsiniz.
 
 ---
-*Author:* faruk-guler
+*Author:* faruk-guler - Apache Version 2.0
